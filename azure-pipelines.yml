@@ -21,4 +21,4 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    rootFolderOrFile: '$(Build.SourcesDirectory)'
