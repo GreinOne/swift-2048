@@ -18,5 +18,7 @@ steps:
     configuration: 'Debug'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
-    exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
-    packageApp: true
+
+- task: ArchiveFiles@2
+  inputs:
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
